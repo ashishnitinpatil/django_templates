@@ -12,7 +12,6 @@ The `url` templatetags use `user` as the namespace for the [default auth urls](h
 **NOTE** - The templates have not been tested yet!
 
 ## Licensing
-============
 
 Please take a look at the [MIT License of django-allauth](https://github.com/pennersr/django-allauth/blob/master/LICENSE).
 
