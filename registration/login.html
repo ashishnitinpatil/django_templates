@@ -1,0 +1,18 @@
+{% extends "registration/base.html" %}
+
+{% load i18n %}
+
+{% block title %}{% trans "Sign In" %}{% endblock %}
+
+{% block content %}
+    <h1>{% trans "Sign In" %}</h1>
+
+    <p>{% blocktrans %}If you have not created an account yet, then please <a href="{% url 'user:signup' %}">sign up</a> first.{% endblocktrans %}</p>
+
+    <form class="login" method="post" action="{% url 'user:login' %}">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <a href="{% url 'user:password_reset' %}">{% trans "Forgot Password?" %}</a>
+      <button type="submit">{% trans "Sign In" %}</button>
+    </form>
+{% endblock %}

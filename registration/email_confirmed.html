@@ -1,0 +1,11 @@
+{% extends "registration/base.html" %}
+
+{% load i18n %}
+
+{% block title %}{% trans "Confirm E-mail Address" %}{% endblock %}
+
+{% block content %}
+    <h1>{% trans "Confirm E-mail Address" %}</h1>
+
+    <p>{% blocktrans %}You have confirmed your e-mail address - <a href="mailto:{{ email_address }}">{{ email_address }}</a>.{% endblocktrans %}</p>
+{% endblock %}
